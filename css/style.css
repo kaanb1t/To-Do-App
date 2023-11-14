@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Nunito&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+.title {
+    width: 30%;
+    height: 10vh;
+    position: absolute;
+    top: 7vh;
+    left: 10%;
+}
+.title h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+    color: #232429;
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 50vh;
+    margin: 0 10px;
+    background-color: #232429;
+    flex-direction: row;
+    position: relative;
+    top: 35.4vh;
+}
+.form-container form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 20px;
+}
+.form-container form label {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+.form-container form input[type="text"],
+.form-container form input[type="number"],
+.form-container form input[type="text"]:focus {
+    font-size: 1.5rem;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.form-container form input[type="checkbox"] {
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #eee;
+}
+.form-container form button {
+    font-size: 1.5rem;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #232429;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+.form-container form button:hover {
+    background-color: #414457;
+    color: #fff;
+}
+.tasks-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 80vh;
+    margin: 0 10px;
+    background-color: #232429;
+    flex-direction: column;
+    margin-top: 50px;
+    overflow-y: scroll;
+    padding: 20px;
+}
+.tasks-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+.tasks-container .task-item.completed {
+    background-color: #4CAF50; 
+    color: #fff;
+}
+.tasks {
+    width: 75%;
+    height: 100%;
+}
+.task-item {
+    font-size: 1.5rem;
+    background-color: #FF5733;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 75%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.task-item input[type="checkbox"] {
+    height: 25px;
+    width: 25px;
+    margin: 0 auto;
+    padding: 0;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #eee;
+}
+.task-info {
+    width: 100%;
+}
+@media (max-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-family: 'Kanit', sans-serif;
+        font-family: 'Nunito', sans-serif;
+    }
+    .title {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .form-container {
+        position: relative;
+        top: 50px;
+    }
+    .tasks-container{
+        position: relative;
+        top: 75px;
+    }
+    .form-container,
+    .tasks-container {
+        width: 95%;
+        margin: 10px;
+    }
+    .form-container form {
+        width: 100%;
+    }
+    .form-container form button {
+        width: 100%;
+    }
+    .form-container form {
+        padding: 20px;
+        border-radius: 5px;
+    }
+    .form-container form label,
+    .form-container form input {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .form-container form input[type="checkbox"] {
+        height: 40px;
+        width: 40px;
+    }
+    .form-container form button {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    .tasks-container h2 {
+        font-size: 1.5rem;
+    }
+    .tasks-container .task-item {
+        width: 100%;
+    }
+    .tasks-container {
+        padding: 20px;
+    }
+    .task-item input[type="checkbox"] {
+        height: 25px;
+        width: 25px;
+    }
+}
